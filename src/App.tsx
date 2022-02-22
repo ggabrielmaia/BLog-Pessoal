@@ -1,11 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/estaticos/navbar/Nav';
 import Footer from './components/estaticos/footer/Footer';
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import Home from './paginas/home/Home';
+import Login from './paginas/login/Login';
 import './App.css';
-import Login from './paginas/login/Login'
+import ListaTema from './components/temas/listatema/ListaTema';
+import ListaPostagem from './components/postagens/listapostagem/ListaPostagem';
 
 
 function App() {
@@ -26,8 +28,15 @@ function App() {
             <Route path='/home'>
               <Home />
             </Route>
+            
             <Route path='/cadastrousuario'>
               <CadastroUsuario />
+            </Route>
+            <Route path='/temas'>
+              <ListaTema />
+            </Route>
+            <Route path='/posts'>
+              <ListaPostagem />
             </Route>
           </div>
         </Switch>
@@ -35,4 +44,5 @@ function App() {
     </Router>
   );
 }
+
 export default App;
